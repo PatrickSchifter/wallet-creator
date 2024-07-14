@@ -26,7 +26,7 @@ npm start
 ```
 
 Output
-The script will output a new mnemonic phrase, seed, root key, account key, node public key, node private key, and the corresponding Bitcoin Testnet address. Example output:
+The script will output a new seed, node private key, and the corresponding Bitcoin Testnet address. Example output:
 
 {
 address: <your generated address>,
