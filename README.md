@@ -6,17 +6,21 @@ Ensure you have Node.js installed on your machine. This project was developed us
 
 Installation
 Clone the repository:
-bash
+
+```
 git clone https://github.com/yourusername/your-repo-name.git
 cd your-repo-name
 Install the necessary dependencies:
-bash
+```
+
 npm install
 Usage
 Run the script to generate a new Bitcoin Testnet wallet:
 
-bash
-node src/createWallet.js
+```
+npm start
+```
+
 Output
 The script will output a new mnemonic phrase, seed, root key, account key, node public key, node private key, and the corresponding Bitcoin Testnet address. Example output:
 
@@ -32,13 +36,19 @@ Troubleshooting
 If you encounter the error TypeError: Not enough data:
 
 Ensure you are passing the publicKey as a Buffer to the bitcoin.payments.p2pkh function:
-javascript
+
+```
 let btcAddress = bitcoin.payments.p2pkh({
 pubkey: Buffer.from(node.publicKey),
 network: network,
 }).address;
+```
+
 Verify the versions of your dependencies. You may need to update bitcoinjs-lib:
-bash
+
+```
 npm install bitcoinjs-lib@latest
+```
+
 License
 This project is licensed under the MIT License. See the LICENSE file for details.
